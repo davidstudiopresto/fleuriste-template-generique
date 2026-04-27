@@ -6,6 +6,8 @@ const photos = [
   "/gallery/fleur-2.jpg",
   "/gallery/fleur-3.jpg",
   "/gallery/fleur-4.jpg",
+  "/gallery/fleur-5.jpg",
+  "/gallery/fleur-6.jpg",
 ];
 
 export default function Gallery() {
@@ -32,15 +34,6 @@ export default function Gallery() {
                   sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover hover:scale-[1.03] transition-transform duration-[1200ms]"
                 />
-              </div>
-            </FadeIn>
-          ))}
-          {Array.from({ length: 2 }).map((_, i) => (
-            <FadeIn key={`placeholder-${i}`} delay={(photos.length + i) * 0.08}>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#e8e0d0] flex items-center justify-center">
-                <span className="text-[10px] uppercase tracking-[0.32em] text-[#a8997f]">
-                  [PHOTO {photos.length + i + 1}]
-                </span>
               </div>
             </FadeIn>
           ))}

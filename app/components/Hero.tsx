@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Chevron() {
   return (
     <svg
@@ -16,19 +18,21 @@ function Chevron() {
 export default function Hero() {
   return (
     <section id="top" className="relative w-full">
-      <div className="relative w-full h-[78vh] md:h-[88vh] overflow-hidden bg-[#e8e0d0]">
-        {/* PLACEHOLDER PHOTO HERO — remplacer par : <Image src="/gallery/hero.jpg" alt="..." fill priority sizes="100vw" className="object-cover" /> */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[11px] uppercase tracking-[0.36em] text-[#a8997f]">
-            [PHOTO HERO — composition signature]
-          </span>
-        </div>
+      <div className="relative w-full h-[78vh] md:h-[88vh] overflow-hidden bg-[var(--ink)]">
+        <Image
+          src="/gallery/hero.jpg"
+          alt="Composition florale signature"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
 
         <div className="relative z-10 h-full flex items-center">
           <div className="mx-auto max-w-[1400px] w-full px-4 sm:px-6 md:px-10">
             <div className="max-w-[560px] bg-white p-6 sm:p-10 md:p-14 shadow-sm">
               <h1 className="font-bold text-[var(--ink)] text-[28px] sm:text-[36px] md:text-[48px] lg:text-[54px] leading-[1.05] tracking-[-0.005em] uppercase">
-                [SLOGAN PRINCIPAL]
+                Fleurs locales et de saison
               </h1>
               <span className="block w-12 h-0.5 bg-[var(--ink)] mt-6 sm:mt-8" />
               <a

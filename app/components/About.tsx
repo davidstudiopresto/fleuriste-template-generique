@@ -1,29 +1,36 @@
+import Image from "next/image";
 import FadeIn from "./FadeIn";
 
 export default function About() {
   return (
     <section id="a-propos" className="bg-white">
       <div className="mx-auto max-w-[1400px] grid md:grid-cols-2 gap-10 md:gap-16 px-6 md:px-10">
-        <FadeIn className="relative aspect-[4/5] md:aspect-auto md:min-h-[640px] overflow-hidden rounded-2xl bg-[#e8e0d0] flex items-center justify-center">
-          {/* PLACEHOLDER PHOTO ARTISAN — remplacer par : <Image src="/gallery/about.jpg" alt="..." fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" /> */}
-          <span className="text-[10px] uppercase tracking-[0.32em] text-[#a8997f] px-6 text-center">
-            [PHOTO ARTISAN — portrait du gérant]
-          </span>
+        <FadeIn className="relative aspect-[4/5] md:aspect-auto md:min-h-[640px] overflow-hidden rounded-2xl">
+          <Image
+            src="/gallery/about.jpg"
+            alt="L'artisan fleuriste"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
         </FadeIn>
         <FadeIn delay={0.15} className="md:pr-6 lg:pr-14 py-20 md:py-32 flex flex-col justify-center">
           <span className="font-[family-name:var(--font-serif)] italic text-[var(--olive)] text-[18px] md:text-[20px] mb-3 tracking-[0.01em]">
             — l'artisan
           </span>
-          <h2 className="font-[family-name:var(--font-serif)] italic font-light text-[var(--ink)] text-[44px] md:text-[64px] leading-[1.05] tracking-[-0.01em]">
-            L'atelier de [PRÉNOM GÉRANT]
+          <h2 className="font-bold uppercase text-[var(--ink)] text-[28px] md:text-[40px] tracking-[0.04em] leading-[1.15]">
+            100% local, 100% de saison
           </h2>
           <span className="block w-12 h-0.5 bg-[var(--ink)] mt-8" />
           <p className="mt-8 text-[var(--ink)] text-[17px] leading-[1.8]">
-            [PARAGRAPHE 1 — histoire de l'artisan, sa démarche, sa philosophie. 3-4 lignes.]
+            Chaque bouquet est composé à la main, dans l'atelier, à partir de
+            fleurs choisies pour leur fraîcheur et leur saisonnalité. On y
+            travaille les jours qui comptent — un mariage, une cérémonie, un
+            dimanche que l'on a envie d'embellir.
           </p>
           <p className="mt-6 text-[var(--ink)] text-[17px] leading-[1.8]">
-            [PARAGRAPHE 2 — informations pratiques : horaires d'ouverture, type de
-            rendez-vous, adresse de l'atelier.]
+            La fleur est traitée avec la même attention que dans une nature
+            morte — vivante, généreuse, jamais figée.
           </p>
           <a
             href="#visiter"

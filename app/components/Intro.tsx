@@ -8,8 +8,9 @@ export default function Intro() {
           [NOM DU FLEURISTE], atelier de [PRÉNOM GÉRANT]
         </h2>
         <p className="mt-6 text-[var(--ink)] text-[17px] md:text-[19px] leading-relaxed max-w-2xl mx-auto">
-          [PHRASE D'ACCROCHE — décrire en 2 lignes les services principaux et la ville
-          où se trouve l'atelier.]
+          Bouquets de saison, plantes choisies avec soin, créations sur mesure
+          pour vos cérémonies — composés à la main, avec ce qu'il faut
+          d'émotion.
         </p>
       </FadeIn>
     </section>

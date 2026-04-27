@@ -1,13 +1,13 @@
 import FadeIn from "./FadeIn";
 
 const schedule = [
-  ["Lundi", "[HORAIRES OU FERMÉ]"],
-  ["Mardi", "[HORAIRES]"],
-  ["Mercredi", "[HORAIRES]"],
-  ["Jeudi", "[HORAIRES]"],
-  ["Vendredi", "[HORAIRES]"],
-  ["Samedi", "[HORAIRES]"],
-  ["Dimanche", "[HORAIRES OU FERMÉ]"],
+  ["Lundi", "08:30 — 12:00 · 14:30 — 19:00"],
+  ["Mardi", "08:30 — 12:00 · 14:30 — 19:00"],
+  ["Mercredi", "08:30 — 12:00 · 14:30 — 19:00"],
+  ["Jeudi", "08:30 — 12:00 · 14:30 — 19:00"],
+  ["Vendredi", "08:30 — 12:00 · 14:30 — 19:00"],
+  ["Samedi", "08:30 — 12:30 · 14:30 — 19:00"],
+  ["Dimanche", "Fermé"],
 ];
 
 export default function Visit() {

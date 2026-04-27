@@ -2,16 +2,16 @@ import FadeIn from "./FadeIn";
 
 const items = [
   {
-    title: "[SERVICE 1]",
-    desc: "[Description du service 1 — ex : Composition du jour, fleurs choisies une à une — à partir de 50 €]",
+    title: "Bouquet du jour",
+    desc: "Composition de saison",
   },
   {
-    title: "[SERVICE 2]",
-    desc: "[Description du service 2 — ex : Bouquets de mariée, arches, centres de table — sur devis]",
+    title: "Bouquet sur mesure",
+    desc: "Pour les jours qui comptent",
   },
   {
-    title: "[SERVICE 3]",
-    desc: "[Description du service 3 — ex : Coussins, raquettes, gerbes — composés avec retenue]",
+    title: "Plantes & arrangements",
+    desc: "Pour la maison ou pour offrir",
   },
 ];
 
