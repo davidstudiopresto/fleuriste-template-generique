@@ -34,9 +34,6 @@ export default function Navigation() {
             <div className="leading-none font-bold uppercase tracking-[0.18em] md:tracking-[0.22em] text-[var(--ink)] text-[22px] sm:text-[28px] md:text-[44px]">
               [NOM DU <span className="text-[var(--olive)]">FLEURISTE]</span>
             </div>
-            <div className="mt-2 text-[9px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.5em] text-[var(--ink-soft)]">
-              Fleuriste artisan
-            </div>
           </a>
 
           <nav className="hidden md:block w-full relative">
@@ -45,7 +42,7 @@ export default function Navigation() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="text-[12px] uppercase tracking-[0.22em] text-[var(--ink)] hover:text-[var(--olive)] transition-colors"
+                    className="nav-link text-[12px] uppercase tracking-[0.22em] text-[var(--ink)] hover:text-[var(--olive)] transition-colors"
                   >
                     {l.label}
                   </a>

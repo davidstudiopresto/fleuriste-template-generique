@@ -1,17 +1,19 @@
 import FadeIn from "./FadeIn";
+import Filigrane from "./Filigrane";
 
 export default function Intro() {
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <FadeIn className="mx-auto max-w-3xl px-6 text-center">
-        <h2 className="font-bold uppercase text-[var(--ink)] text-[24px] md:text-[34px] tracking-[0.05em] leading-[1.25]">
-          [NOM DU FLEURISTE], atelier de [PRÉNOM GÉRANT]
-        </h2>
-        <p className="mt-6 text-[var(--ink)] text-[17px] md:text-[19px] leading-relaxed max-w-2xl mx-auto">
-          Bouquets de saison, plantes choisies avec soin, créations sur mesure
-          pour vos cérémonies — composés à la main, avec ce qu'il faut
-          d'émotion.
-        </p>
+    <section className="relative py-20 md:py-28 bg-[var(--white)] overflow-hidden">
+      <FadeIn className="relative mx-auto max-w-5xl px-6 text-center">
+        <div className="relative inline-flex items-center justify-center gap-8 md:gap-14 w-full">
+          <Filigrane size={90} flip className="hidden md:block shrink-0" />
+          <p className="flex-1 text-[var(--ink)] text-[17px] md:text-[20px] leading-relaxed">
+            Bouquets de saison, plantes choisies avec soin, créations sur mesure
+            pour vos cérémonies — composés à la main, avec ce qu&apos;il faut
+            d&apos;émotion.
+          </p>
+          <Filigrane size={90} className="hidden md:block shrink-0" />
+        </div>
       </FadeIn>
     </section>
   );

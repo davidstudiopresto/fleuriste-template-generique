@@ -17,7 +17,7 @@ const items = [
 
 export default function Creations() {
   return (
-    <section id="creations" className="pb-20 md:pb-28 bg-white">
+    <section id="creations" className="pb-20 md:pb-28 bg-[var(--white)]">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid md:grid-cols-3 gap-8 md:gap-10">
           {items.map((item, i) => (

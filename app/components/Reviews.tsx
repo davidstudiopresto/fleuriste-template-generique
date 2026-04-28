@@ -1,5 +1,7 @@
 "use client";
 
+import Filigrane from "./Filigrane";
+
 const reviews = [
   {
     name: "[NOM CLIENT 1]",
@@ -55,21 +57,27 @@ export default function Reviews() {
   const doubled = [...reviews, ...reviews];
 
   return (
-    <section id="avis" className="py-20 md:py-28 bg-white overflow-hidden">
+    <section id="avis" className="py-20 md:py-28 bg-[var(--white)] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="text-center mb-14">
-          <h2 className="font-bold uppercase text-[var(--ink)] text-[28px] md:text-[40px] tracking-[0.04em] leading-[1.15]">
-            Ce qu'ils en disent
-          </h2>
-          <div className="mt-8 inline-flex items-center gap-4">
-            <span className="text-[56px] md:text-[68px] leading-none font-bold text-[var(--ink)]">
-              [X,X]
-            </span>
-            <div className="flex flex-col items-start gap-2">
-              <Stars n={5} />
-              <span className="text-[11px] uppercase tracking-[0.28em] text-[var(--ink-soft)]">
-                [N] avis · Google
+        <div className="mb-14">
+          <div className="flex items-center justify-center gap-6 md:gap-10">
+            <Filigrane size={70} flip className="hidden md:block shrink-0" />
+            <h2 className="font-bold uppercase text-[var(--ink)] text-[28px] md:text-[40px] tracking-[0.04em] leading-[1.15] text-center">
+              Ce qu&apos;ils en disent
+            </h2>
+            <Filigrane size={70} className="hidden md:block shrink-0" />
+          </div>
+          <div className="mt-8 flex justify-center">
+            <div className="inline-flex items-center gap-4">
+              <span className="text-[56px] md:text-[68px] leading-none font-bold text-[var(--ink)]">
+                [X,X]
               </span>
+              <div className="flex flex-col items-start gap-2">
+                <Stars n={5} />
+                <span className="text-[11px] uppercase tracking-[0.28em] text-[var(--ink-soft)]">
+                  [N] avis · Google
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -79,23 +87,25 @@ export default function Reviews() {
         <div className="absolute inset-y-0 left-0 w-32 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-32 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
 
-        <div className="flex gap-6 marquee-track">
+        <div className="flex items-center gap-6 marquee-track">
           {doubled.map((r, i) => (
-            <article
-              key={i}
-              className="shrink-0 w-[320px] md:w-[400px] bg-white border border-[var(--border)] rounded-2xl p-8 md:p-10 flex flex-col"
-            >
-              <Stars n={r.rating} />
-              <p className="mt-6 text-[var(--ink)] leading-[1.7] text-[16px] flex-1 font-light">
-                « {r.text} »
-              </p>
-              <footer className="mt-8 pt-6 border-t border-[var(--border)] flex items-baseline justify-between">
-                <span className="text-[var(--ink)] text-[15px]">{r.name}</span>
-                <span className="text-[10px] uppercase tracking-[0.24em] text-[var(--ink-soft)]">
-                  {r.date}
-                </span>
-              </footer>
-            </article>
+            <div key={i} className="flex items-center gap-6 shrink-0">
+              <article className="shrink-0 w-[320px] md:w-[400px] bg-white border border-[var(--border)] rounded-2xl p-8 md:p-10 flex flex-col">
+                <Stars n={r.rating} />
+                <p className="mt-6 text-[var(--ink)] leading-[1.7] text-[16px] flex-1 font-light">
+                  « {r.text} »
+                </p>
+                <footer className="mt-8 pt-6 border-t border-[var(--border)] flex items-baseline justify-between">
+                  <span className="text-[var(--ink)] text-[15px]">{r.name}</span>
+                  <span className="text-[10px] uppercase tracking-[0.24em] text-[var(--ink-soft)]">
+                    {r.date}
+                  </span>
+                </footer>
+              </article>
+              <span aria-hidden="true" className="text-[var(--olive)] text-[28px] font-[family-name:var(--font-serif)] italic shrink-0 select-none">
+                ✻
+              </span>
+            </div>
           ))}
         </div>
       </div>

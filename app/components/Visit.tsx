@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn";
+import Filigrane from "./Filigrane";
 
 const schedule = [
   ["Lundi", "08:30 — 12:00 · 14:30 — 19:00"],
@@ -12,15 +13,19 @@ const schedule = [
 
 export default function Visit() {
   return (
-    <section id="visiter" className="py-20 md:py-28 bg-white">
+    <section id="visiter" className="py-20 md:py-28 bg-[var(--white)]">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 grid md:grid-cols-2 gap-16 md:gap-24">
         <FadeIn>
-          <h2 className="font-bold uppercase text-[var(--ink)] text-[28px] md:text-[40px] tracking-[0.04em] leading-[1.15]">
-            Pousser la porte de l'atelier
-          </h2>
+          <div className="flex items-center gap-5">
+            <Filigrane size={56} flip className="hidden md:block shrink-0" />
+            <h2 className="font-bold uppercase text-[var(--ink)] text-[28px] md:text-[40px] tracking-[0.04em] leading-[1.15]">
+              Pousser la porte de l&apos;atelier
+            </h2>
+          </div>
           <span className="block w-12 h-0.5 bg-[var(--ink)] mt-8" />
           <p className="mt-8 text-[var(--ink)] text-[17px] leading-[1.8] max-w-md">
-            [PHRASE D'ACCUEIL — invitation à venir à la boutique, jours d'ouverture.]
+            Du lundi au samedi, sur rendez-vous ou en boutique, pour parler
+            fleurs, choisir un bouquet ou préparer un événement.
           </p>
 
           <div className="mt-12 space-y-8">
