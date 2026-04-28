@@ -107,22 +107,19 @@ grep -rn "\[" app/ | grep -v node_modules
 
 ---
 
-### 2. Photos à remplacer
+### 2. Photos — FIXES (à conserver telles quelles)
 
-Toutes dans `public/gallery/` :
+⚠️ **Les 8 photos du template sont fixes et ne doivent pas être remplacées.** Elles font partie de l'identité visuelle commune à tous les sites générés depuis ce template.
 
-| Fichier | Usage | Format conseillé |
-|---|---|---|
-| `hero.jpg` | Photo de fond du hero (slogan principal) | Paysage 2000×1300+, lumineuse |
-| `about.jpg` | Photo de l'artisan / atelier | Portrait 900×1350+, ambiance chaleureuse |
-| `fleur-1.jpg` | Galerie photo 1 | Portrait 4:5 (~1000×1250) |
-| `fleur-2.jpg` | Galerie photo 2 | Portrait 4:5 |
-| `fleur-3.jpg` | Galerie photo 3 | Portrait 4:5 |
-| `fleur-4.jpg` | Galerie photo 4 | Portrait 4:5 |
-| `fleur-5.jpg` | Galerie photo 5 | Portrait 4:5 |
-| `fleur-6.jpg` | Galerie photo 6 | Portrait 4:5 |
+Photos présentes dans `public/gallery/` :
 
-> 💡 **Conseil** : garder les noms de fichiers identiques permet de remplacer les photos sans toucher au code.
+| Fichier | Usage |
+|---|---|
+| `hero.jpg` | Photo de fond du hero (slogan principal) |
+| `about.jpg` | Photo de l'artisan / atelier |
+| `fleur-1.jpg` à `fleur-6.jpg` | Galerie (6 photos) |
+
+> Ces photos restent identiques entre tous les déploiements — ne pas les modifier.
 
 ---
 
@@ -199,8 +196,9 @@ fleuriste_template_générique/
 ## 🛠 Workflow recommandé pour un nouveau fleuriste
 
 1. **Cloner** le repo (ou dupliquer le dossier)
-2. **Remplacer les photos** dans `public/gallery/` (garder les noms)
-3. **Find & Replace** des placeholders `[...]` dans VS Code (Cmd+Shift+H)
-4. **Lancer en local** : `npm install && npm run dev`
-5. **Vérifier** que tous les `[...]` ont été remplacés : `grep -rn "\[" app/ | grep -v node_modules`
-6. **Déployer** : `npx vercel --prod --name <nom-du-fleuriste>`
+2. **Find & Replace** des placeholders `[...]` dans VS Code (Cmd+Shift+H) — textes uniquement
+3. **Lancer en local** : `npm install && npm run dev`
+4. **Vérifier** que tous les `[...]` ont été remplacés : `grep -rn "\[" app/ | grep -v node_modules`
+5. **Déployer** : `npx vercel --prod --name <nom-du-fleuriste>`
+
+> Les photos dans `public/gallery/` ne sont pas à modifier — elles font partie de l'identité commune du template.
